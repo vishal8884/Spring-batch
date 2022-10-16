@@ -27,6 +27,7 @@ public class BatchConfig {
 				.build();
 	}
 	
+	@Bean
 	public Step step() {
 		return sbf.get("step1")
 				.<String,String>chunk(1)
