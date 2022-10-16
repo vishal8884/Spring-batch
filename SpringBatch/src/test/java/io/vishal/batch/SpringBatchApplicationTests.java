@@ -21,10 +21,15 @@ class SpringBatchApplicationTests {
 	@Autowired
 	Job job;
 	
-	@Test
+	//@Test  //uncomment to test basic one
 	public void testBatch() throws JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, JobParametersInvalidException {
 		JobParameters jobParameters = new JobParametersBuilder().addLong("time",System.currentTimeMillis()).toJobParameters();
 		launcher.run(job, jobParameters);
+	}
+	
+	@Test
+	public void testBatchCsvToDb() throws JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, JobParametersInvalidException {
+		launcher.run(job, new JobParametersBuilder().addLong("time", System.currentTimeMillis()).toJobParameters());
 	}
 
 }

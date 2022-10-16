@@ -1,0 +1,7 @@
+atch config
+
+
+Job -->  Step -->   1) Item Reader
+                    2) ItemProcessor
+                    3) ItemWriter
+JobListiner                     
