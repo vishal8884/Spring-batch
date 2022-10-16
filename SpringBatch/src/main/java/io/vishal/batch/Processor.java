@@ -7,7 +7,7 @@ public class Processor implements ItemProcessor<String, String>{
 	@Override
 	public String process(String item) throws Exception {
 		System.out.println("Inside process() in processor");
-		return "PROCRESSED"+item.toUpperCase();
+		return "PROCRESSED -> "+item.toUpperCase();
 	}
 
 }

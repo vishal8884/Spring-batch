@@ -18,7 +18,7 @@ public class BatchConfig {
 	@Autowired
 	private JobBuilderFactory jbf;
 	
-	@Bean
+	@Bean  //when we autowire Job interface then it will automatically inject the below
 	public Job job() {
 		return jbf.get("job1")
 				.incrementer(new RunIdIncrementer())
